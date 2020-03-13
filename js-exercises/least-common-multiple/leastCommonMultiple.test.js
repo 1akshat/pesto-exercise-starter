@@ -14,6 +14,7 @@ describe("leastCommonMultiple", () => {
     expect(leastCommonMultiple(7, 3)).toEqual(21);
     expect(leastCommonMultiple(16,2)).toEqual(16);
     expect(leastCommonMultiple(9,100)).toEqual(900);
+    expect(leastCommonMultiple(0,10)).toEqual(10);
   });
 
 });
