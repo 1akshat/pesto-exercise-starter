@@ -1,5 +1,5 @@
 function alternatingCharacters(arrOfStrings) {
-  var alternatingCharactersCount = []
+  var alternatingCharactersCount = [];
 	arrOfStrings.forEach(function(singleString) {
 		let counter = 0;
      if (singleString.length >= 1 && singleString.length <= 100000) {
@@ -12,10 +12,10 @@ function alternatingCharacters(arrOfStrings) {
      		}  
      	});
      	counter = singleString.length - [ singleString.charAt(0), ...stringArray ].length;
-     }
-     alternatingCharactersCount.push(counter)
-	})
-  return alternatingCharactersCount
-}
+     };
+     alternatingCharactersCount.push(counter);
+	});
+  return alternatingCharactersCount;
+};
 
 export { alternatingCharacters };
