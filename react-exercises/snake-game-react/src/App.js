@@ -2,15 +2,26 @@ import React from 'react';
 import Snake from './Snake';
 import Food from './Food';
 
+
+const getRandomCoords = () => {
+	const min = 1;
+	const max = 97;
+	// Reference: https://gist.github.com/kerimdzhanov/7529623
+	const xCord = (Math.random() * (max - min + 1)) + min;
+	const yCord = (Math.random() * (max - min + 1)) + min;
+	return [xCord, yCord]
+}
+
 const App = (props) => {
 
 	// Hardcoded positions of the snake-modules on init.
 	const state = {
 		snakeCoordinates: [
-			[0,0], 
-			[3,0]
+			[50,0], 
+			[50,3],
+			[50,6]
 		],
-		foodCoordinates: [18,76]
+		foodCoordinates: getRandomCoords()
 	}
 	
 	return (
