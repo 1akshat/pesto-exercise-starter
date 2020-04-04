@@ -1,0 +1,17 @@
+body {
+  font-family: 'arial';
+}
+
+.main-title {
+  text-align: center;
+  font-size: 50px;
+}
+
+.snake-window {
+  height: 600px;
+  width: 600px;
+  margin-left: 35%;
+  margin-right: 35%;
+  border: 1px solid #000;
+}
+
