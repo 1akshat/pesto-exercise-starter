@@ -7,11 +7,18 @@ body {
   font-size: 50px;
 }
 
-.snake-window {
+.game-window {
+	position: relative;
   height: 600px;
   width: 600px;
-  margin-left: 35%;
-  margin-right: 35%;
+  margin: 50px auto;
   border: 1px solid #000;
 }
 
+.snake-module {
+	position: absolute;
+	height: 3%;
+	width: 3%;
+	border: 1px solid #fff;
+	background-color: #000;
+}
