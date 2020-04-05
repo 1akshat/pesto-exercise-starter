@@ -4,12 +4,12 @@ const Snake = ({snakeCoordinates}) => {
 	return (
 		<React.Fragment>
 			{
-				snakeCoordinates.map( coords => {
+				snakeCoordinates.map( (coords, key) => {
 					const style = {
 						left: `${coords[0]}%`,
 						top: `${coords[1]}%`
 					}
-					return ( <div className="snake-module" style={style}></div> );
+					return ( <div className="snake-module" style={style} key={key}></div> );
 				})
 			}
 		

@@ -5,6 +5,8 @@ body {
 .main-title {
   text-align: center;
   font-size: 50px;
+  color: #b6b428;
+  margin-top: 2%;
 }
 
 .game-window {
@@ -12,7 +14,7 @@ body {
   width: 600px;
   position: relative;
   margin: 50px auto;
-  border: 1px solid #000;
+  border: 10px solid #000;
 }
 
 .snake-module {
@@ -20,7 +22,8 @@ body {
 	width: 3%;
 	position: absolute;
 	border: 1px solid #fff;
-	background-color: #000;
+	background-color: #b6b428;
+	z-index: 999;
 }
 
 .snake-food {
