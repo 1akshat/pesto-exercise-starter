@@ -2,7 +2,7 @@
 
 # Submission
 
-Game URL: _____
+Game URL: https://akshat-snake-game.netlify.com/
 
 Mockup URL: https://balsamiq.cloud/sir4yb8/pfssbmj/r2278/b0209
 
