@@ -169,9 +169,7 @@ class App extends React.Component {
           <h1 className="main-title">{ this.props.title }</h1>
           <div className="button-group">
             <p>Click on the buttons below to start the game.</p>
-            <button className="play-button" onClick={this.startNewbie}>Newbie</button>
-            <button className="play-button" onClick={this.startIntermediate}>Intermediate</button>
-            <button className="play-button" onClick={this.startExpert}>Expert</button>
+            ...
           </div>
           <Score score={this.state.score}/>
           <div className="game-window">
