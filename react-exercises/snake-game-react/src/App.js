@@ -1,18 +1,10 @@
 import React from 'react';
-import Snake from './Snake';
-import Food from './Food';
-import Score from './Score';
-import Gameover from './Gameover';
-
-
-const getRandomCoords = () => {
-  const [min, max] = [1, 97];
-  // Reference: https://gist.github.com/kerimdzhanov/7529623
-  const xCord = Math.round((Math.random() * (max - min) + min)/2) * 2;
-  const yCord = Math.round((Math.random() * (max - min) + min)/2) * 2;
-  return [xCord, yCord]
-}
-
+import Snake from './Components/Snake';
+import Food from './Components/Food';
+import Score from './Components/Score';
+import Gameover from './Components/Gameover';
+import LevelButton from './Components/LevelButton';
+import { getRandomCoords } from './Utils/utils';
 
 class App extends React.Component {
 
@@ -29,23 +21,6 @@ class App extends React.Component {
       score: 0
     }
   }
-
-  startNewbie = () => {
-    this.setState({ newBie: true});
-    setInterval(this.moveSnake,300);
-  }
-
-  startIntermediate = () => {
-    this.setState({ intermediate: true});
-    setInterval(this.moveSnake, 80);
-  }
-
-  startExpert = () => {
-    this.setState({ expert: true});
-    setInterval(this.moveSnake,30);
-  }
-
-  // REACT LIFECYCLE METHODS
 
   // Call on Init
   componentDidMount = () => {
@@ -78,7 +53,6 @@ class App extends React.Component {
     }
   }
 
-
   moveSnake = () => {
     const snakeCoords = [...this.state.snakeCoordinates];
     // Taking the last element as head
@@ -103,7 +77,7 @@ class App extends React.Component {
   }
 
 
-  // Conditions for Game Over
+// Conditions for Game Over
   snakeCrossBoundaries = () => {
     const snakeCoords = [...this.state.snakeCoordinates];
     let head = snakeCoords[snakeCoords.length - 1];
@@ -167,10 +141,7 @@ class App extends React.Component {
     return (
         <React.Fragment>
           <h1 className="main-title">{ this.props.title }</h1>
-          <div className="button-group">
-            <p>Click on the buttons below to start the game.</p>
-            ...
-          </div>
+          <LevelButton newBie={ this.state.newbie } intermediate={ this.state.intermediate } expert={ this.state.expert } moveSnake={ this.moveSnake }/>
           <Score score={this.state.score}/>
           <div className="game-window">
             <Snake snakeCoordinates={ this.state.snakeCoordinates }/>
